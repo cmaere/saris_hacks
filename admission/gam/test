@@ -1,0 +1,14 @@
+#!/bin/bash
+
+INPUT_FILE='cha2.csv'
+
+IFS=','
+
+while read OS HS
+do
+python /Users/charlie/Downloads/gam-2.55-python-src/gam.py update user $OS password 'malawi123'
+#echo "Operating system - $OS"
+#echo "Hosting server type - $HS"
+echo "user $OS updated"
+done < $INPUT_FILE
+

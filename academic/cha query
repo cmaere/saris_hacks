@@ -1,0 +1,25 @@
+ SELECT  student.Name,
+								student.Name
+                                submitresult.courseCode,
+								course.CourseName, 
+                                examresult.RegNo,
+                               	examresult.ExamScore,
+							    programme.ProgrammeName,
+                                examresult.AYear
+			   FROM programme, course, submitresult
+					   INNER JOIN examresult ON (submitresult.courseCode = examresult.CourseCode)
+					   INNER JOIN student ON (examresult.RegNo = student.RegNo)
+							 WHERE ( 
+                                    
+									  (student.ProgrammeofStudy = programme.ProgrammeCode)
+                                      
+                                       AND 
+                                    (examresult.CourseCode like '%50%') 
+									 AND  
+									  (examresult.AYear='2010') 
+                                      AND 
+									  (course.Department = 'Basic Studies Department')
+								   )
+                            GROUP BY examresult.RegNo
+							
+                            INNER JOIN examresult ON (course.CourseCode = examresult.CourseCode)

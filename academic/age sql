@@ -1,0 +1,4 @@
+select Name, FLOOR(DATEDIFF(CURDATE(),DBirth2)/365 ) AS AGE, Sex,EntryYear
+from student
+where EntryYear > 2006  AND Faculty <> 'Kamuzu College of Nursing Staff' 
+ORDER BY EntryYear,Sex,AGE ASC

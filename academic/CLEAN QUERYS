@@ -1,0 +1,17 @@
+// QUERY TO CLEAN EXAM RESULT TABLE
+
+DELETE FROM `examresult` WHERE `AYear` = 2010 AND `CourseCode` = 'RES 304' AND `Recorder` = 'mmuocha'
+
+UPDATE `examresult` SET `Recorder` = 'mmuocha' WHERE `AYear` = 2010 AND `CourseCode` = 'RES 304' AND `Recorder` = 'mmsiska'
+
+
+//
+
+DELETE FROM `examresult` WHERE `AYear` = 2010 AND `CourseCode` = 'NUR 302'
+DELETE FROM `examresult` WHERE `AYear` = 2010 AND `CourseCode` = 'NUR 300'
+DELETE FROM `examresult` WHERE `AYear` = 2010 AND `CourseCode` = 'BEH 101'
+DELETE FROM `examresult` WHERE `AYear` = 2010 AND `CourseCode` = 'BI 102'
+DELETE FROM `examresult` WHERE `AYear` = 2010 AND `CourseCode` = 'CIS 103'
+
+DELETE FROM `examresult` WHERE `AYear` = 2010 AND `CourseCode` = 'NUR 200' AND Recorder = 'wynessgondwe'
+

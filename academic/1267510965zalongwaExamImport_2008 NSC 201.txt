@@ -1,0 +1,413 @@
+AYear	Semester	Marker	CourseCode	ExamCategory	ExamDate	ExamSitting	Recorder	RecordDate	RegNo	ExamScore	Checked	Status	Count	Comment																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/001	66	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/002	73	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/003	67	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/004	65	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/005	63	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/006	65	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/007	64	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/008	58	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/009	69	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/010	64	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/011	69	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/012	75	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/013	68	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/014	59	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/015	70	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/016	61	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/017	54	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/018	64	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/06/012	65	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/06/013	66	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/019	67	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/020	77	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/021	75	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/022	69	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/023	62	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/024	66	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/026	60	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/027	67	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/028	67	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/029	69	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/030	70	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/031	62	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/032	72	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/033	75	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/034	71	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/035	68	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/036	57	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/037	74	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/039	64	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/040	70	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/041	60	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/042	66	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/043	71	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/044	65	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/045	68	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/046	64	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/047	71	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/048	68	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/049	65	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/050	60	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/052	68	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/053	72	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/054	61	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/055	64	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/056	68	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/057	66	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/058	61	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/059	71	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/060	65	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/061	71	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/062	70	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/063	63	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/064	66	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/065	65	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/066	73	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/067	62	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/068	66	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/069	69	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/070	69	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/071	63	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/072	58	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/073	72	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/074	66	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/075	75	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/077	72	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/078	62	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/079	70	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/080	69	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/081	65	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/082	70	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/083	64	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/084	64	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/085	65	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/086	64	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/087	66	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/088	64	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/089	64	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/090	69	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/091	63	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/092	65	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/093	68	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/094	65	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/095	67	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	0210/54/BScN	66	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/097	63	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/098	72	1	1	0	.																
+2008	Semester I	1	NSC 201	8	2008-12-05	1	zalongwa	2009-07-28	KCN/BScN/07/099	62	1	1	0	.																
+																														
+																														
+																														
+																														
+																														
+																														
+																														
+																														
+																														
+																														
+																														
+																														
+																														
+																														
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										

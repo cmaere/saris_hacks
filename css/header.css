@@ -1,0 +1,224 @@
+body {
+	font-family : Verdana, helvetica, sans-serif;
+	font-size: 11pt;
+}
+td {
+	font-family : Verdana, helvetica, sans-serif;
+	font-size: 10pt;
+}
+h1{
+	font-size: 12pt;
+	font-weight: bold;
+	margin-bottom:0px;
+}
+
+.sub{
+	color: #FF9900;
+	font-weight: bold;
+	margin-bottom:0px;
+	FONT-SIZE: 10pt;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	text-transform: capitalize;
+	line-break : normal;
+}
+
+.header1{
+	font-size: 12pt;
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+.header2{
+	font-size: 13pt;
+	font-weight: bold;
+	padding-bottom: 6px;
+}
+.tableheader2{
+	font-size: 8pt;
+	font-family : Arial, helvetica, sans-serif;
+	font-weight: bold;
+	background-color: #098098;
+	color: #FFFFFF;
+	padding-bottom: 3px;
+	padding-left: 5px;
+}
+.header3{
+	font-size: 8pt;
+	font-weight: bold;
+	padding-bottom: 1px;
+}
+.header4{
+	font-size: 10pt;
+	font-weight: bold;
+	padding-bottom: 5px; 
+}
+.smalltext {
+	font-size: 10pt;
+}
+.vsmalltext {
+	font-size: 7pt;
+}
+.white {
+	color: #FFFFFF;
+}
+
+/* general link */
+a {
+	color: #0000FF;
+	text-decoration : none;
+}
+a:hover {
+	text-decoration : underline;
+} 
+
+/* needed for Article */
+.embeddedImage
+{
+	margin: 5px;
+}
+.embeddedImageCaption
+{
+	font-size: 10px;
+	font-weight : bold;
+}
+.copyright{
+	font-family: verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #807E7E;
+	padding:10px 0px 10px 20px;
+}
+ 
+
+
+
+/************************************************/
+/*
+/* NAVIGATION STYLES
+/*
+/************************************************/
+
+/* Navigation Link */
+a.NavigationLink{
+	font-family:verdana,helvetica,sans-serif;
+	font-size:13px;
+	color:#006633;
+	text-decoration : none;
+}
+
+a.NavigationLink:hover{
+	color:#FF0000;
+	text-decoration : underline;
+}
+
+a.SubNavigationLink{
+	font-family:verdana,helvetica,sans-serif;
+	font-size:12px;
+	color:#006633;
+	text-decoration : none;
+}
+
+a.SubNavigationLink:hover{
+	color:#FF0000;
+	text-decoration : underline;
+}
+
+a.onLink{
+	color:#FF0000;;
+}
+
+a.onLink:hover{
+	color:#000000;
+	text-decoration : underline;
+	
+}
+
+/* Navigation - whole */
+.EnclosureBox{
+	margin-top:15px;
+	
+	border: 1px solid #dddddd;
+	width:170;
+}
+
+/* Navigation - SECTION */
+.SectionEnclosureBox{
+	margin:3px;
+}
+
+.SectionOnBox{
+	background: url('section_background_on.gif') 0px 0px;
+	padding: 5px;
+	border: 1px solid #cccccc;
+	border-bottom: 0px solid #cccccc;
+	background-color: #cccccc;
+	font-style : italic;
+}
+
+.SectionOffBox{
+	background: url('section_background.gif') 0px 0px;
+	padding: 5px;
+	border: 1px solid #cccccc;
+	background-color: #ffffff;
+}
+
+
+
+/* Navigation - SUB SECTION */
+.SubSectionEnclosureBox{
+	margin-left:10px;
+	border: 1px solid #cccccc;
+	border-top: 0px solid #000000;
+	background-color: #ffffff;
+}
+
+.SubSectionOnBox{
+	padding: 5px 5px 5px 5px;
+	font-weight: bold;
+}
+
+.SubSectionOffBox{
+	padding: 5px 5px 5px 5px;
+}
+
+/* Navigation - SUB SUB SECTION */
+.SubSubSectionOnBox{
+	padding: 5px 5px 5px 5px;
+	margin-left:20px;
+	color: #000000;
+	font-size:10px;
+}
+
+.SubSubSectionOffBox{
+	margin-left:20px;
+	padding: 5px 5px 5px 5px;
+}
+
+.SubSubSectionEnclosureBox{
+	margin-bottom:10px;
+}
+
+/* Navigation - Special Members */
+.SpecialSectionBox{
+	padding: 5px;
+	border: 1px solid #cccccc;
+	background-color: #FFDDDD;
+	background: url('special_background.gif') 0px 0px;
+}
+
+/************************************************/
+/*
+/* TABLE STYLES
+/*
+/************************************************/
+
+.Table1{
+	border: 1px solid #cccccc;
+	font-size: 10px;
+}
+
+.Table1Header{
+	background-color: #99aaaa;
+	font-family: "MS Sans Serif", Geneva, sans-serif;
+	color: White;
+	font-weight:bold;
+	letter-spacing : 1px;
+}

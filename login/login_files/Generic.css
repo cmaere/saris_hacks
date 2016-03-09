@@ -1,0 +1,39 @@
+BODY {
+	FONT-SIZE: 9pt; BACKGROUND: url(images/bk_image.gif) white repeat-x left top; FONT-FAMILY: Arial
+}
+A {
+	FONT-SIZE: 9pt; FONT-FAMILY: Arial
+}
+.loginForm {
+	MARGIN: auto; WIDTH: 100%; TEXT-ALIGN: center
+}
+.loginOuterFormContents {
+	MARGIN-TOP: -5px; MARGIN-LEFT: auto; WIDTH: 432px; MARGIN-RIGHT: auto; HEIGHT: 240px
+}
+.loginLeftBorder {
+	BACKGROUND: url(images/fade_left.gif) repeat-y right top; FLOAT: left; WIDTH: 60px; HEIGHT: 240px
+}
+.loginInnerFormContents {
+	FLOAT: left; WIDTH: 312px; HEIGHT: 240px; BACKGROUND-COLOR: white
+}
+.loginRightBorder {
+	BACKGROUND: url(images/fade_right.gif) repeat-y left top; FLOAT: right; WIDTH: 60px; HEIGHT: 240px
+}
+.loginHelpRow {
+	MARGIN-TOP: 5px; FLOAT: right; PADDING-BOTTOM: 10px; TEXT-ALIGN: right
+}
+.loginErrorRow {
+	CLEAR: both
+}
+.loginErrorMessage {
+	BORDER-RIGHT: #cfad66 1px solid; PADDING-RIGHT: 20px; BORDER-TOP: #cfad66 1px solid; DISPLAY: block; PADDING-LEFT: 20px; FONT-WEIGHT: bold; PADDING-BOTTOM: 20px; BORDER-LEFT: #cfad66 1px solid; COLOR: black; PADDING-TOP: 20px; BORDER-BOTTOM: #cfad66 1px solid; BACKGROUND-COLOR: #fffbcc; TEXT-ALIGN: center
+}
+.loginFormRow {
+	MARGIN-BOTTOM: 5px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 70px; TEXT-ALIGN: right
+}
+.loginFormHeader {
+	PADDING-RIGHT: 3px
+}
+.loginButtonRow {
+	MARGIN-TOP: 15px; MARGIN-LEFT: 92px; TEXT-ALIGN: left
+}
