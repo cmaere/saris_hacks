@@ -8,7 +8,7 @@
 	
 	# this script will use the following globals
 	global $szSection, $szSubSection, $szSubSubSection,$szSubSubSectionTitle,$szSubSectionTitle, $szTitle, $additionalStyleSheet, $arrStructure, $szRootURL, $blnHideNav, $arrVariations;
-
+require_once('../Connections/zalongwa_newphp.php');
 	//if (!isset($blnHideNav)){$blnHideNav = false;}
 	if (isset($_GET['hidenav'])){$blnHideNav=true;}else{$blnHideNav = false;}
 	
@@ -38,8 +38,8 @@
 	#get organisation name
 	
 	$qname = 'SELECT Name, Address FROM organisation';
-	$dbname = mysql_query($qname);
-	$name_row = mysql_fetch_assoc($dbname);
+	$dbname = mysqli_query($zalongwa2,$qname);
+	$name_row = mysqli_fetch_assoc($dbname);
 
 ?>
 
