@@ -60,9 +60,9 @@
 	$i++;
 	
 	// Course Evaluation
-	$arrStructure[$i] = array( 'name1' => 'Course Evaluation', 'name2' => 'Mawasiliano2', 'url' => 'studentcourseevaluation.php?sponsor='.$sponsor.'&semester='.$semester.'&fees='.$fees.'&balance='.$balance.'&minimumfee='.$minimumfee.'', 'image' => '',  'width' => '', 'height' => '');
+	$arrStructure[$i] = array( 'name1' => 'Course Evaluation', 'name2' => 'Mawasiliano2', 'url' => 'courseEvaluationform.php?sponsor='.$sponsor.'&semester='.$semester.'&fees='.$fees.'&balance='.$balance.'&minimumfee='.$minimumfee.'', 'image' => '',  'width' => '', 'height' => '');
 	$arrStructure[$i]['subsections'] = array(); $j = 1;
-	$arrStructure[$i]['subsections'][$j] = array( 'name1' => 'Course Evaluation', 'name2' => 'Shahada', 'url' => 'studentcourseevaluation.php?sponsor='.$sponsor.'&semester='.$semester.'&fees='.$fees.'&balance='.$balance.'&minimumfee='.$minimumfee.'', 'width' => '', 'height' => '');
+	$arrStructure[$i]['subsections'][$j] = array( 'name1' => 'Course Evaluation', 'name2' => 'Shahada', 'url' => 'courseEvaluationform.php?sponsor='.$sponsor.'&semester='.$semester.'&fees='.$fees.'&balance='.$balance.'&minimumfee='.$minimumfee.'', 'width' => '', 'height' => '');
 	$j++;
 	$i++;
      

@@ -3,12 +3,13 @@
 	require_once('../Connections/sessioncontrol.php');
     require_once('../Connections/zalongwa.php');
 	# include the header
-	include('studentMenu.php');
+	/*include('studentMenu.php');
 	global $szSection, $szSubSection, $szTitle, $additionalStyleSheet;
 	$szSection = 'Course Evaluation';
 	$szTitle = 'Course Evaluation';
 	$szSubSection = 'Course Evaluation';
 	include("studentheader.php");
+	global $AYear, $RegNo, $semester, $programme,$coursecode; */
 ?>
 <?php
 
@@ -24,32 +25,31 @@ if($fees < $minimumfee && $sponsor == 1 && $semester == "Semester II")
 	   
  }
  else
-   {
-
-
-         /*@$new=$_GET['new'];
-         if (@$new=='1')
-		    {
-	         require_once("courseEvaluationForm.php");
-	         @$new=='';
-	         exit;
-            }
-			*/
-	
-
-	    //if ((isset($_POST["add"]))&&(($_POST["programme"]=='0') || ($_POST["year"]=='0') ))
+  { 
 		if ((isset($_POST["add"]))&&($_POST["programme"]=='0') )
 	    {
-		  $msg="Please select your programme of study";
+		  $msg="Please Pick a course";
 		  
 	    } 
 	
-if (isset($_POST['save']))
-{
+
+if ((isset($_POST["add"]))&&($_POST["programme"]!='0')  )	
+{    
+  $year = addslashes($_POST["year"]);
+  $programme = addslashes($_POST["programme"]);
+  $semester = addslashes($_POST["semester"]);
+  $coursecode = ($_POST["coursecode"]);
+    /*echo $RegNo;
+	echo $coursecode;
+	echo $AYear;
+    echo $semester;
+	echo $programme; */
+	//$year = addslashes($_POST["year"]);
+    //$programme = addslashes($_POST["programme"]);
 	include("courseEvaluationform.php");
 }
 	
-if ((isset($_POST["add"]))&&($_POST["programme"]!='0')  )	
+if (isset($_POST['save']))	
 {
 
 $year = addslashes($_POST["year"]);
@@ -90,85 +90,88 @@ $row_courseslist = mysql_fetch_assoc($courseslist);
 ?>
 
 <fieldset>
-	<legend>Step 1: Select your Program  of study</legend>
+	<legend>Step 1: Select Course to evaluate</legend>
 		<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post" enctype="multipart/form-data" name="frmAyear" target="_self">
 		<table width="200" border="1" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
 		<tr ><td colspan="2" > <font size="3" color="red"> <?php echo $msg; ?> </font></td></tr>
 		<tr><td colspan="2"> <b> <?php  ?></b></td></tr>
 		  <tr>
-			<th scope="row" nowrap><div align="right"> Programme:</div>
+			<th scope="row" nowrap><div align="right"> Course: </div>
 			</th>
 			<td>
-            <input name="regno" type="hidden" value="<?php echo $RegNo; ?>"><input name="username" type="hidden" value="<?php echo $username; ?>"><select name="programme" size="1">
-			<option value="0">[Select Programme]</option>
+            <input name="regno" type="hidden" value="<?php echo $RegNo; ?>"><input name="username" type="hidden" value="<?php echo $username; ?>"><select name="coursecode" size="1">
+			<option value="0">[Click here to pick course]</option>
 <?php
-				$query_coursecode = "SELECT DISTINCT ProgrammeName,ProgrammeCode, prefix FROM program_year ORDER BY ProgrammeCode ASC";
-                $resultb=mysql_query($query_coursecode);
-                while ($line = mysql_fetch_array($resultb, MYSQL_ASSOC)) 
+           //PICKING CURRENTACADEMIC YEAR AND  SEMESTER
+		   
+           $query_ayear = "SELECT AYear, Semister_status FROM academicyear WHERE Status='1'";
+		   
+		   $resultAyear=mysql_query($query_ayear); 
+            while ($line = mysql_fetch_array($resultAyear, MYSQL_ASSOC)) 
                 {
-                    $progname = $line["ProgrammeName"];
-                    $progcode = $line["ProgrammeCode"];
-                    $prefix = $line["prefix"];
-                    if($progcode == 10052)
-                    {
-                    ?>
-                    
-                    
-        
-						<option value="<?php echo $prefix ; ?>"><?php echo $progname;?></option>
-<?php
-                    }
-                    else
-                    {
-                    ?>
-                    
-                    
-        
-						<option value="<?php echo $progcode ; ?>"><?php echo $progname;?></option>
-<?php
-                    }              
+                    $AYear = $line["AYear"];
+                    $semester = $line["Semister_status"];
+				}
+             
+			 //PICKING CURRENT PROGRAMME AND PROGRAMME COURSES  
+												
+			$query_regcourses= " SELECT DISTINCT examregister.CourseCode, course.programme
+          FROM examregister
+          INNER JOIN course ON ( examregister.CourseCode = course.CourseCode )
+          WHERE (examregister.RegNo = '$RegNo'
+          AND examregister.semester = 'semester I'
+          AND examregister.AYear = '$AYear')";
+		    
+			$result_regcourses=mysql_query($query_regcourses); 
+            while ($line2 = mysql_fetch_array($result_regcourses, MYSQL_ASSOC)) 
+                {
+                    //$firstcourse = $line2["CourseCode"];
+					$programme = $line2["programme"];
+					
+                }
+               
+			    		   
+				$query_coursecode = "SELECT DISTINCT CourseCode, CourseName FROM course WHERE  YearOffered LIKE '$semester' AND Programme= '$programme' ORDER BY coursecode ASC";
+                $resultb=mysql_query($query_coursecode);
+                while ($coursedetail = mysql_fetch_array($resultb, MYSQL_ASSOC)) 
+                {
+                    $coursecode = $coursedetail["CourseCode"];
+                    $coursename = $coursedetail["CourseName"];
+                   
+                  ?>
+                 
+				 <option value="<?php echo $coursecode; ?>"><?php echo $coursename;?></option>
+    <?php
+                                  
                 }
          
-?>
-			</select><input name="progname" type="hidden" value="<?php echo $progname; ?>"></td>
+     ?>
+			</select> <input name="coursename" type="hidden" value="<?php echo $coursename; ?>"></td>
+			</select> <input name="programme" type="hidden" value="<?php echo $programme; ?>"></td>
+			</select> <input name="semester" type="hidden" value="<?php echo $semester; ?>"></td>
+			</select> <input name="year" type="hidden" value="<?php echo $AYear; ?>"></td>
 
-
-			<!-- <select name="Year" size="1"> 
-			<select name="programme" id="select3">
-		    <option value="0">--------------------------------</option>
-            <option value="1001">Bachelor of Science in Nursing and Midwifery</option>
-            <option value="1005">Bachelor of Science in Nursing (Post Basic)</option>
-            <option value="1003">University Certificate in Midwifery</option>
-           </select> -->
+  
+			
 		   
 		   
 		   </td>
+		  
 		  </tr>
-		 <!-- <tr bgcolor="#CCCCCC">
-      <th nowrap scope="row"><div align="right">Year:</div></th>
-      <td>
-	    <select name="year" id="select3">
-		    <option value="0">--------------------------------</option>
-            <option value="1">Year 1</option>
-            <option value="2">Year 2</option>
-            <option value="3">Year 3</option>
-			<option value="4">Year 4</option>
-           </select>
-	  
-</td>
-    </tr>-->
+
            <tr>
 			<th scope="row">  	&nbsp; 	&nbsp;</th>
 			<td> 	&nbsp;  	&nbsp;</td>
 		  </tr>
 		  <tr>
 			<th scope="row"><div align="right"></div></th>
-			<td><input name="add" type="submit" value="Next"></td>
+			<td><input name="add" type="submit" value="Next"> </td>
 		  </tr>
 		</table>
 					
 		</form>			
  </fieldset>
+ 
  <?php } 
  
  
