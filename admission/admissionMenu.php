@@ -39,6 +39,7 @@ require_once('../Connections/zalongwa.php');
 			$j++;
 			$arrStructure[$i]['subsections'][$j] = array( 'name1' => 'Subject', 'name2' => 'Somo', 'url' => 'admissionSubject.php', 'width' => '', 'height' => '');
 			$j++;
+
 			//$arrStructure[$i]['subsections'][$j] = array( 'name1' => 'CutoffPoint', 'name2' => 'Alama za Mwisho', 'url' => 'admissionCutoffpoint.php', 'width' => '', 'height' => '');
 			//$j++;
 			$arrStructure[$i]['subsections'][$j] = array( 'name1' => 'Sponsor', 'name2' => 'Mfadhiri', 'url' => 'aformSponsor.php', 'width' => '', 'height' => '');
@@ -89,6 +90,10 @@ require_once('../Connections/zalongwa.php');
 	$arrStructure[$i]['subsections'][$j] = array( 'name1' => 'Admission Books', 'name2' => 'Formu ya Kuandikishwa', 'url' => 'admissionBook.php', 'width' => '', 'height' => '');
 	$j++;
 	$arrStructure[$i]['subsections'][$j] = array( 'name1' => 'Course Books', 'name2' => 'Formu ya Kuandikishwa', 'url' => 'courseBook.php', 'width' => '', 'height' => '');
+	$j++;
+	
+
+	$arrStructure[$i]['subsections'][$j] = array( 'name1' => 'Course Assignment', 'name2' => 'Formu ya Kuandikishwa', 'url' => 'admissionCourseLeactureAssignment.php', 'width' => '', 'height' => '');
 	$j++;
 	//$arrStructure[$i]['subsections'][$j] = array( 'name1' => 'Exams Result', 'name2' => 'Matokeo ya Mtihani', 'url' => 'admissionExamResult.php', 'width' => '', 'height' => '');
 	//$j++;

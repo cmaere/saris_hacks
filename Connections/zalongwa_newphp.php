@@ -1,6 +1,5 @@
 <?php
 ini_set('display_errors', 0);
-error_reporting(0);
 // User configurable variables
 $szSiteTitle = 'zalongwaSARIS';
 $szWebmasterEmail = '< jlungo@udsm.ac.tz >';
@@ -9,19 +8,25 @@ $szWebmasterEmail = '< jlungo@udsm.ac.tz >';
 
 @$hostname_zalongwa = "41.70.64.3";
 @$database_zalongwa = "saris_year1";
-@$username_zalongwa = "toor";
-@$password_zalongwa = "toornck";
-$zalongwa = mysql_connect($hostname_zalongwa, strrev($username_zalongwa), strrev($password_zalongwa)); 
-if (!$zalongwa){
-	 printf(mysql_error()."Tunasikitika Kuwa Hatuwezi Kutoa Huduma Kwa Sasa,\rTafadhari Jaribu Tena Baadaye!");
+@$username_zalongwa = "sirasnck";
+@$password_zalongwa = "awgnolaz60";
+$zalongwa2 = mysqli_connect($hostname_zalongwa, strrev($username_zalongwa), strrev($password_zalongwa),$database_zalongwa); 
+if (!$zalongwa2){
+	 printf(mysqli_error()."Tunasikitika Kuwa Hatuwezi Kutoa Huduma Kwa Sasa,\rTafadhari Jaribu Tena Baadaye!");
 	 exit;
 	}
-@mysql_select_db ($database_zalongwa, $zalongwa); 
+	else
+	{
+		//die("connected");
+	}
+	
+	
+//@mysql_select_db ($database_zalongwa, $zalongwa2); 
 
 
 global $szRootURL,$szRootPath,$szSiteTitle,$szWebmasterEmail,$arrStructure,$arrVariations,$intDefaultVariation;
 global $szDBName,$szDBUsername,$szDBPassword,$szDiscussionAdmin,$szDiscussionPassword;
-if (!$zalongwa){
+if (!$zalongwa2){
 	 printf("Tunasikitika Kuwa Hatuwezi Kutoa Huduma Kwa Sasa,\rTafadhari Jaribu Tena Baadaye!");
 	 exit;
 	}
@@ -46,8 +51,13 @@ $arrVariationPreference = array (
 
 	#Get Organisation Name and address
 	$qorg = "SELECT * FROM organisation";
-	$dborg = mysql_query($qorg);
-	$row_org = mysql_fetch_assoc($dborg);
+	$dborg = mysqli_query($zalongwa2,$qorg);
+	if (!$dborg) {
+	    printf("Error: %s\n", mysqli_error($zalongwa2));
+	    exit();
+	}
+	while( $row_org=mysqli_fetch_array($dborg) ) {
+	//$row_org = mysqli_fetch_assoc($dborg);
 	$org = $row_org['Name'];
 	$post = $row_org['Address'];
 	$phone = $row_org['tel'];
@@ -55,4 +65,12 @@ $arrVariationPreference = array (
 	$email = $row_org['email'];
 	$website = $row_org['website'];
 	$city = $row_org['city'];
+}
+
+function mysqli_result($result , $offset , $field = 0){
+    $result->data_seek($offset);
+    $row = $result->fetch_array();
+    return $row[$field];
+}
+	//die("am here")
 ?>

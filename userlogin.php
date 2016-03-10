@@ -1,5 +1,5 @@
  
- <?php require_once('Connections/zalongwa.php'); ?>
+ <?php require_once('Connections/zalongwa_newphp.php'); ?>
 <?php
 
 ini_set('display_errors', 1);
@@ -17,11 +17,13 @@ if (isset($_POST['textusername'])) {
   $password = $_POST['textpassword'];
   // Generate jlungo hash
  $hash = "{jlungo-hash}" . base64_encode(pack("H*", sha1($password )));
+ 
+ //die($hash);
 //$hash = $password;
 
 $query_AYear = "SELECT AYear, Semister_status FROM academicyear WHERE Status = 1";
-        $result_AYear=mysql_query($query_AYear);
-        while ($line = mysql_fetch_array($result_AYear, MYSQL_ASSOC)) 
+        $result_AYear=mysqli_query($zalongwa2,$query_AYear);
+        while ($line = mysqli_fetch_array($result_AYear, MYSQL_ASSOC)) 
                     {
                         $year= $line["AYear"];  
                         $semester = $line["Semister_status"];
@@ -30,10 +32,12 @@ $query_AYear = "SELECT AYear, Semister_status FROM academicyear WHERE Status = 1
 	$sql=sprintf("SELECT UserName, password, UPPER(RegNo) AS RegNo ,LEFT(UPPER(RegNo),9) as RegNo2,RIGHT(UPPER(RegNo),3) AS RegNo3,AccpacID,weaver,Position, Module, PrivilegeID, FullName, Faculty FROM security WHERE UserName='%s' AND password='%s'",
  		get_magic_quotes_gpc() ? $username : addslashes($username), get_magic_quotes_gpc() ? $hash : addslashes($hash)); 
 		
-		$result = @mysql_query($sql, $zalongwa);
-		$loginFoundUser = mysql_num_rows($result);
+		//die($sql);
+		
+		$result = @mysqli_query($zalongwa2,$sql);
+		$loginFoundUser = mysqli_num_rows($result);
         //die('here');
-        //die('here'.$loginFoundUser);
+      // die('here'.$loginFoundUser);
     
  		if ($loginFoundUser <> 0) 
     {
@@ -42,21 +46,21 @@ $query_AYear = "SELECT AYear, Semister_status FROM academicyear WHERE Status = 1
 		  
 		   
            // accpac integration module
-            $accpacid = mysql_result($result,0,'AccpacID');
-            $weaver = mysql_result($result,0,'weaver');
+            $accpacid = mysqli_result($result,0,'AccpacID');
+            $weaver = mysqli_result($result,0,'weaver');
             
            
             
             
-       		$loginStrGroup  = mysql_result($result,0,'password');
-    		$loginName		= mysql_result($result,0,'FullName');
-			$position 		= mysql_result($result,0,'Position');
-			$RegNo 		= mysql_result($result,0,'RegNo');
-            $RegNo2 		= mysql_result($result,0,'RegNo2');
-            $RegNo3 		= mysql_result($result,0,'RegNo3');
-			$module 	= mysql_result($result,0,'Module');
-			$userFaculty 	= mysql_result($result,0,'Faculty');
-			$privilege  = mysql_result($result,0,'PrivilegeID');
+       		$loginStrGroup  = mysqli_result($result,0,'password');
+    		$loginName		= mysqli_result($result,0,'FullName');
+			$position 		= mysqli_result($result,0,'Position');
+			$RegNo 		= mysqli_result($result,0,'RegNo');
+            $RegNo2 		= mysqli_result($result,0,'RegNo2');
+            $RegNo3 		= mysqli_result($result,0,'RegNo3');
+			$module 	= mysqli_result($result,0,'Module');
+			$userFaculty 	= mysqli_result($result,0,'Faculty');
+			$privilege  = mysqli_result($result,0,'PrivilegeID');
 			$mtumiaji = 3;
             
             //$trim = ($RegNo2, 'KCN/BSCN/');
@@ -72,18 +76,18 @@ $query_AYear = "SELECT AYear, Semister_status FROM academicyear WHERE Status = 1
 			$_SESSION['userFaculty'] = $userFaculty; 
 						
 	 	$update_login = "UPDATE security SET LastLogin = now() WHERE UserName = '$username' AND Password = '$password'";
-	 	$result = mysql_query($update_login) or die("Siwezi ku-update LastLogin, Zalongwa");
+	 	$result = mysqli_query($zalongwa2,$update_login) or die("Siwezi ku-update LastLogin, Zalongwa");
         
         
         $query_spons = "select Name from sponsors where Name not like '%Govt%' and Name not like '%Private%' and Name not like '%Self%'";
-        $result_spons=mysql_query($query_spons);
-        while ($line = mysql_fetch_array($result_spons, MYSQL_ASSOC)) 
+        $result_spons=mysqli_query($zalongwa2,$query_spons);
+        while ($line = mysqli_fetch_array($result_spons, MYSQL_ASSOC)) 
                     {
                         $sponsor= $line["Name"];  
                         
                                 $query_spons2 = "select Sponsor from student where RegNo = '$RegNo' and Sponsor LIKE '%$sponsor%'";
-                                $result_spons2=mysql_query($query_spons2);
-                                $sponsorcheck= mysql_num_rows($result_spons2);
+                                $result_spons2=mysqli_query($zalongwa2,$query_spons2);
+                                $sponsorcheck= mysqli_num_rows($result_spons2);
                                
 							   //HUbert added  module !=6 to deny access to blocked students            
                                   if(($sponsorcheck == 1) && ($module!='6'))
@@ -227,5 +231,5 @@ else{
 }
 ?>
 <?php
-mysql_close($zalongwa);
+mysqli_close($zalongwa2);
 ?>
