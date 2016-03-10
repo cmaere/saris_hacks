@@ -13,11 +13,11 @@
 	$szTitle = 'Course Lecturer Assignment';
 	include('admissionheader.php');
 
-	function lecturerCheck($lecturer,$zalongwa)
+	function lecturerCheck($lecturer,$zalongwa2)
 	{
 		$sql2 = "SELECT LectId FROM LecturerCourse WHERE LectId = '$lecturer";
            
-           $list=mysqli_query($zalongwa,$sql2);
+           $list=mysqli_query($zalongwa2,$sql2);
            $check = mysqli_num_rows($list);
 		   
 		   return($check);
@@ -37,7 +37,7 @@
 		
 		$sql2 = "SELECT UPPER(FullName) as FullName,RegNo FROM security WHERE Position = 'Lecturer' ORDER BY FullName ASC";
            
-           $list=mysqli_query($zalongwa,$sql2);
+           $list=mysqli_query($zalongwa2,$sql2);
            while($row_list=mysqli_fetch_assoc($list)){
            ?>
            <option value="<?php echo $row_list['RegNo']; ?>">
@@ -56,7 +56,7 @@
 			
 			$sql3 = "SELECT CourseName,CourseCode FROM course ORDER BY CourseCode ASC";
             
-            $list=mysqli_query($zalongwa,$sql3);
+            $list=mysqli_query($zalongwa2,$sql3);
             while($row_list=mysqli_fetch_assoc($list)){
             ?>
             <option value="<?php echo $row_list['CourseCode']; ?>">
@@ -92,13 +92,13 @@ if(isset($_POST["submit"]))
 	if($lecturercheck == 0)
 	{
 		$sqlins = "INSERT INTO LecturerCourse(CourseCode,LectId,CourseOptions) VALUES('$course','$lecturer','$option')";
-		mysqli_query($zalongwa,$sqlins) OR die(mysqli_error());
+		mysqli_query($zalongwa2,$sqlins) OR die(mysqli_error());
 		
 	}
 	else
 	{
 		$sqlup = "UPDATE LecturerCourse SET CourseCode='$course',CourseOptions='$options' WHERE LectId = '$lecturer'";
-		mysqli_query($zalongwa,$sqlup) OR die(mysqli_error());
+		mysqli_query($zalongwa2,$sqlup) OR die(mysqli_error());
 		
 	}
 	

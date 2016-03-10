@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors', 0);
+ini_set('display_errors', 1);
 // User configurable variables
 $szSiteTitle = 'zalongwaSARIS';
 $szWebmasterEmail = '< jlungo@udsm.ac.tz >';
