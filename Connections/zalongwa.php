@@ -7,8 +7,8 @@ $szWebmasterEmail = '< jlungo@udsm.ac.tz >';
 
 @$hostname_zalongwa = "127.0.0.1";
 @$database_zalongwa = "saris_year1";
-@$username_zalongwa = "sirasnck";
-@$password_zalongwa = "awgnolaz60";
+@$username_zalongwa = "toor";
+@$password_zalongwa = "toornck";
 $zalongwa = mysql_connect($hostname_zalongwa, strrev($username_zalongwa), strrev($password_zalongwa)); 
 if (!$zalongwa){
 	 printf(mysql_error()."Tunasikitika Kuwa Hatuwezi Kutoa Huduma Kwa Sasa,\rTafadhari Jaribu Tena Baadaye!");

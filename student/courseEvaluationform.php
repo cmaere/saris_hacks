@@ -17,6 +17,7 @@ require_once('../Connections/zalongwa.php');
 	$szTitle = 'Course Evaluation';
 	$szSubSection = 'Course Evaluation';
 	include("studentheader.php");
+	//include("studentcourseevaluation.php");
 ?>
 
 <script type="text/javascript">
@@ -577,7 +578,33 @@ legend {
 
 
 <?php
-
+   //PICKING CURRENTACADEMIC YEAR AND  SEMESTER
+		   
+           $query_ayear = "SELECT AYear, Semister_status FROM academicyear WHERE Status='1'";
+		   
+		   $resultAyear=mysql_query($query_ayear); 
+            while ($line = mysql_fetch_array($resultAyear, MYSQL_ASSOC)) 
+                {
+                    $AYear = $line["AYear"];
+                    $semester = $line["Semister_status"];
+				}
+	//PICKING CURRENT PROGRAMME AND PROGRAMME COURSES  
+												
+			$query_regcourses= " SELECT DISTINCT examregister.CourseCode, course.programme
+          FROM examregister
+          INNER JOIN course ON ( examregister.CourseCode = course.CourseCode )
+          WHERE (examregister.RegNo = '$RegNo'
+          AND examregister.semester = '$semester'
+          AND examregister.AYear = '$AYear')";
+		    
+			$result_regcourses=mysql_query($query_regcourses); 
+            while ($line2 = mysql_fetch_array($result_regcourses, MYSQL_ASSOC)) 
+                {
+                    //$firstcourse = $line2["CourseCode"];
+					$programme = $line2["programme"];
+					
+                }
+               
 if(isset($_POST['save']))
 { 
      
@@ -720,7 +747,7 @@ $count=1;
 else
 {
 //echo"save not clicked loading form";
-form();	
+form($AYear);	
 }
 	
 	
@@ -731,8 +758,8 @@ form();
 //*************REGISTRATION FORM
 function form()
 {
-	global $year, $programme, $ayear, $courseCode, $unitname, $lname, $campus, $regno, $stdid, $q1, $q2, $q3, $q4, $q5, $q6, $q7, $q8, $q9, $q10, $q11, $q12, $q13, $q14, $q15, $q16, $q17, $q18, $q19, $q20;    
-	global $sectionA, $sectionB, $sectionC, $campus_error;
+	global $RegNo, $year, $programme, $AYear, $CourseCode, $unitname, $lname, $campus, $regno, $stdid, $q1, $q2, $q3, $q4, $q5, $q6, $q7, $q8, $q9, $q10, $q11, $q12, $q13, $q14, $q15, $q16, $q17, $q18, $q19, $q20;    
+	global $sectionA, $sectionB, $sectionC, $campus_error, $semester;
 //global $state1,$state2,$state3,$label_edit,$state4,$AdmissionNo,$stdid;
 
 ?> 
@@ -765,16 +792,28 @@ function form()
   
     <tr>
     <td nowrap="nowrap" class='formfield'>Course Code:<span class="style2">*</span></td>
-	 <input name="year" type="hidden"  value = "<?php if(isset($_GET['year'])) { echo $_GET['year'];  } else { echo $year;} ?> " />
-	 <input name="programme" type="hidden"  value = "<?php if(isset($_GET['programme'])) { echo $_GET['programme'];  } else { echo $programme;} ?> "  />
-     <input name="add" type="hidden"  value = "<?php if(isset($_GET['add'])) { echo $_GET['add'];  } else { echo "return";} ?> "  />
-	
-	
-   <td class='ztable'> <b> <input name="courseCode" type="text" id="cc" value = "<?php if(isset($_GET['courseCode'])) { echo $_GET['courseCode'];  } else { echo $courseCode;} ?> " readonly /> </b></td>
+	 	
+   <td class='ztable'> <b><select name="coursecode" size="1"><option value="0">[Click here to pick course]</option>
+     <?php 
+	  $query_coursecode = "SELECT DISTINCT CourseCode, CourseName FROM course WHERE  YearOffered LIKE '$semester' AND Programme= '$programme' ORDER BY coursecode ASC";
+                $resultb=mysql_query($query_coursecode);
+                while ($coursedetail = mysql_fetch_array($resultb, MYSQL_ASSOC)) 
+                {
+                    $coursecode = $coursedetail["CourseCode"];
+                    $coursename = $coursedetail["CourseName"];
+                   
+                  ?>
+                 
+				 <option value="<?php echo $coursecode; ?>"><?php echo $coursecode." : ".$coursename;?></option>
+    <?php
+                                  
+                }
+	  ?>
+   </b></td>
    <td nowrap="nowrap" class="formfield">Academic Year:<span class="style2">*</span>	</td>
    <td class='ztable'>
    
-   <input name="ayear" type="text" id="ayear" value = "<?php if(isset($_GET['ayear'])) { echo $_GET['ayear'];  } else { echo $ayear;} ?> " readonly />
+   <input name="ayear" type="text" id="ayear" value = "<?php /*if(isset($_GET['year'])) { echo $_GET['year'];  } else {*/ echo $AYear; ?> " readonly />
    </td>
    </tr>
 
@@ -821,7 +860,7 @@ else
 <?php echo $campus_error;  ?></td>
   <td class='formfield'>Student No:<span class="style2">*</span></td>
   <td class='ztable'>
-  <input name="regno" type="text" id="regno" value = "<?php if(isset($_GET['RegNo'])) { echo $_GET['RegNo'];  } else { echo $regno;}  ?>" readonly /> 
+  <input name="regno" type="text" id="regno" value = "<?php if(isset($_GET['RegNo'])) { echo $_GET['RegNo'];  } else { echo $RegNo;}  ?>" readonly /> 
 
   </td>
 </tr>
