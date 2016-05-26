@@ -3,14 +3,14 @@ ini_set('display_errors', 0);
 error_reporting(0);
 // User configurable variables
 $szSiteTitle = 'zalongwaSARIS';
-$szWebmasterEmail = '< jlungo@udsm.ac.tz >';
+$szWebmasterEmail = '<  >';
 
 
 
-@$hostname_zalongwa = "41.70.64.3";
-@$database_zalongwa = "saris_year1";
-@$username_zalongwa = "toor";
-@$password_zalongwa = "toornck";
+@$hostname_zalongwa = "[hostname]";
+@$database_zalongwa = "[database name]";
+@$username_zalongwa = "[username]";
+@$password_zalongwa = "[password]";
 $zalongwa = mysql_connect($hostname_zalongwa, strrev($username_zalongwa), strrev($password_zalongwa)); 
 if (!$zalongwa){
 	 printf(mysql_error()."Tunasikitika Kuwa Hatuwezi Kutoa Huduma Kwa Sasa,\rTafadhari Jaribu Tena Baadaye!");
